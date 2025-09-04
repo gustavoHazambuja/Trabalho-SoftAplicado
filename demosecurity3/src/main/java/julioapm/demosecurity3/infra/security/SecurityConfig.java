@@ -1,4 +1,4 @@
-package julioapm.demosecurity3;
+package julioapm.demosecurity3.infra.security;
 
 import javax.sql.DataSource;
 

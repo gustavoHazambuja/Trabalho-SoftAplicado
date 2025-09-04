@@ -1,4 +1,4 @@
-package julioapm.demosecurity3;
+package julioapm.demosecurity3.controllers;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
