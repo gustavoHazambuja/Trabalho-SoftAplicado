@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
@@ -13,6 +14,7 @@ import com.auth0.jwt.exceptions.JWTVerificationException;
 
 import julioapm.demosecurity3.domain.entities.User;
 
+@Service
 public class TokenService {
     
     @Value("${trabalho.soft.aplicado}")

@@ -2,17 +2,8 @@ package julioapm.demosecurity3.domain.entities;
 
 public enum UserRole {
     
-    ADMIN("admin"),
-    USER("user");
+    ADMIN,
+    USER
 
 
-    private String role;
-
-    UserRole(String role){
-        this.role = role;
-    }
-
-    public String getRole() {
-        return role;
-    }
 }
