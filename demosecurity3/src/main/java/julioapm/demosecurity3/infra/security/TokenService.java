@@ -12,20 +12,18 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 
-import julioapm.demosecurity3.domain.entities.User;
-
 @Service
 public class TokenService {
     
     @Value("${trabalho.soft.aplicado}")
     private String secret;
 
-    public String gerarToken(User user) {
+    public String gerarToken(String userDetails) {
         try{
             Algorithm algorithm = Algorithm.HMAC256(secret);
             String token = JWT.create()
                 .withIssuer("demosecurity3")
-                .withSubject(user.getEmail())
+                .withSubject(userDetails)
                 .withExpiresAt(genExpirationDate())
                 .sign(algorithm);
             return token;
